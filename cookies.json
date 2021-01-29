@@ -1,0 +1,20 @@
+[
+    {
+        "domain": ".global.irap.io",
+        "expiry": 1611963157,
+        "httpOnly": false,
+        "name": "Authentication",
+        "path": "/",
+        "secure": false,
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDcmlhdCBBdXRob3JpemF0aW9uIFNlcnZlciIsImF1ZCI6WyJMeHgxSFhrc2lqV0N3TlJOSFNBNUJqUEo2RVI2VDlxd2I4UE9OSHRxOWpvPSIsIkNyaWF0IFJlc291cmNlIFNlcnZlciJdLCJqdGkiOiI3ZjIzN2QwYy04ZDg3LTQ2ODItYTRiNi0zNWY1NzE5OTZmODgiLCJpYXQiOiIxLzI4LzIwMjEgMTE6MzI6MzggUE0iLCJzdWIiOiJzeXlAeXppZy5jb20uY24iLCJ1bmlxdWVfbmFtZSI6InN5eUB5emlnLmNvbS5jbiIsIm5iZiI6MTYxMTg3Njc1OCwiZXhwIjoxNjExOTA1NTU4fQ.SiWebnxS7YWQ-87WeDi_23Lc4_R9OKoA2YhsOdBAt0k"
+    },
+    {
+        "domain": ".global.irap.io",
+        "expiry": 1611963157,
+        "httpOnly": false,
+        "name": "antd-pro-authority",
+        "path": "/",
+        "secure": false,
+        "value": "ROLE_IEWS_ANALYST"
+    }
+]

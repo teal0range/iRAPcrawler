@@ -1,0 +1,142 @@
+{
+  "GETENTITY": {
+    "url": "https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/entities/sectorbased/?apikey=TEST1&pageno={}&pagesize=100&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST"
+  },
+  "CUM_Default_Rate":{
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/pdindividuals/sectorbased?apikey=TEST1&entitycode=%s&datefrom=LAD&dateto=LAD&forwardpointfrom=0&forwardpointto=0&annualization=0&horizonfrom=12&horizonto=12&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "RISK_REGION_INDUSTRY":{
+    "url": "https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/rankings/entitybased?apikey=TEST1&entitycode=%s&datefrom=LAD&dateto=LAD&forwardpointfrom=0&forwardpointto=3&horizonfrom=12&horizonto=12&collectiontype=REGION_INDUSTRY&primaryflag=1&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "RISK_REGION":{
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/rankings/entitybased?apikey=TEST1&entitycode=%s&datefrom=LAD&dateto=LAD&forwardpointfrom=0&forwardpointto=0&horizonfrom=12&horizonto=12&collectiontype=REGION&primaryflag=1&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "DefaultRateTimeSeries":{
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"url\":\"/iews/pdindividuals/sectorbased?apikey=TEST1&entitycode=%s&forwardpointfrom=0&forwardpointto=0&horizonfrom=12&horizonto=12&frequency=1&event=D&event=F&dateto=LAD&lang=zh-CN\",\"method\":\"GET\",\"timeout\":300000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "RISK_FACTOR":{
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/pdinputs/sectorbased?apikey=TEST1&entitycode=%s&datefrom=LAD&dateto=LAD&sort=y&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "DEFAULT_STRUCTURE": {
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"url\":\"/iews/pdindividuals/sectorbased?apikey=TEST1&entitycode=%s&forwardpointfrom=0&forwardpointto=0&horizonfrom=1&horizonto=60&frequency=30&datefrom=LAD&dateto=LAD\",\"method\":\"GET\",\"timeout\":300000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  },
+  "DEFAULT_ANALYSIS":{
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/mdfindividuals/sectorbased?apikey=TEST1&entitycode=%s&datefrom=LAD&dateto=LAD&horizonfrom=12&horizonto=12&mdftype=ENTITY_CAT_ET&lang=zh-CN\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  }
+}
