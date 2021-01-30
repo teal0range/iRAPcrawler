@@ -56,8 +56,7 @@ class Crawler:
         time.sleep(1)
 
     def get_cookies(self):
-        if not os.path.exists("cookies.json"):
-            self._signIn()
+        self._signIn()
         with open("cookies.json", 'r') as fp:
             cookies = json.load(fp)
         return cookies[0]

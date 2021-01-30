@@ -138,5 +138,23 @@
     "method": "POST",
     "mode": "cors",
     "credentials": "include"
+  },
+  "DTD_LEVEL": {
+    "url":"https://global.irap.io/content_request/iews/getdata",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer {}",
+      "content-type": "application/json",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://global.irap.io/entity",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"method\":\"GET\",\"url\":\"/iews/pdinputs/sectorbased?apikey=TEST1&entitycode=%s&datestamp=LAD&riskfactorid=DTD_LEVEL&forwardpointfrom=0&forwardpointto=0&horizonfrom=12&horizonto=12&frequency=1&dateto=LAD\",\"timeout\":3000000}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
   }
 }

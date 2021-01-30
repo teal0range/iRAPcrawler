@@ -11,7 +11,7 @@ class IrapSpider(scrapy.Spider):
     name = 'irap'
     crawler = Crawler('syy@yzig.com.cn', '!QAZ2wsx')
     cookies = crawler.get_cookies()['value']
-    expiry = crawler.get_cookies()['expiry']
+    expiry = time.time_ns() / 1e9 + 7200
     io = jsonIO(scrapy.Spider.logger, config={"data": "entity"})
     _io = MongoIO(scrapy.Spider.logger)
     cnt = 1
@@ -32,7 +32,7 @@ class IrapSpider(scrapy.Spider):
     def updateCookie(self):
         if time.time_ns() / 1e9 > self.expiry + 100:
             self.cookies = self.crawler.get_cookies()['value']
-            self.expiry = self.crawler.get_cookies()['expiry']
+            self.expiry = time.time_ns() / 1e9 + 7200
 
     def start_requests(self):
         with open("iRAPcrawler/spiders/headers.json", 'r') as fp:
@@ -141,6 +141,16 @@ class GETDATA(IrapSpider):
 
 class DEFAULT_ANALYSIS(IrapSpider):
     name = 'DEFAULT_ANALYSIS'
+
+    def parse(self, response, **kwargs):
+        s = json.loads(response.text.strip(r'"').replace(r'\"', r'"'))
+        if len(s['data']) == 0:
+            return {"tag": self.API, "data": {}}
+        return {"tag": self.API, "data": {s['data'][0][0]["objectCode"]: s['data'][0]}}
+
+
+class DTD_LEVEL(IrapSpider):
+    name = "DTD_LEVEL"
 
     def parse(self, response, **kwargs):
         s = json.loads(response.text.strip(r'"').replace(r'\"', r'"'))
